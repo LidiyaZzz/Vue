@@ -25,6 +25,7 @@ p, .text {
   font-size: 22px;
   line-height: 150%;
   font-weight: 400;
+  margin-bottom: 22px;
 }
 
 h1,
@@ -36,6 +37,7 @@ h6 {
   font-family: "DM Serif Display";
   line-height: 125%;
   font-weight: 400;
+  margin-bottom: 24px;
 }
 
 h1 {
@@ -355,6 +357,7 @@ template {
 }
 .project__title {
   margin-bottom: 8px;
+  text-align: center;
 }
 .project__description {
   width: 70%;
@@ -392,12 +395,9 @@ template {
 
 .counter {
   background-color: #F4F0EC;
-  min-height: 457px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .counter__container {
+  min-height: 457px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -427,13 +427,14 @@ template {
 }
 
 .blog__title {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
   text-align: center;
 }
 .blog__description {
   width: 70%;
   margin: auto;
   text-align: center;
+  margin-bottom: 52px;
 }
 .blog__cards {
   display: grid;
@@ -471,8 +472,8 @@ template {
   justify-content: center;
 }
 
-.footer p, .footer h2, .footer li {
-  line-height: 300%;
+.footer p, .footer h3 {
+  margin-bottom: 26px;
 }
 .footer__container {
   display: flex;
@@ -496,6 +497,9 @@ template {
 }
 .footer__menu {
   list-style: none;
+}
+.footer__menu li {
+  line-height: 300%;
 }
 .footer__contacts {
   max-width: 258px;
@@ -571,6 +575,102 @@ template {
   margin-right: 20px;
 }
 
+.blogDetails__container {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  margin-bottom: 200px;
+}
+.blogDetails__articles {
+  width: 66%;
+}
+.blogDetails__tags {
+  width: 30%;
+}
+.blogDetails__article {
+  margin-bottom: 35px;
+}
+
+.tags__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+}
+.tags__list li {
+  display: block;
+  margin: 0 10px 10px 0;
+}
+.tags__button, .tags__reset {
+  height: 41px;
+  padding: 9px 30px;
+  border-radius: 10px;
+  background-color: #F4F0EC;
+  color: #292F36;
+}
+
+.article__img {
+  margin-bottom: 46px;
+}
+.article__data {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+.article__quotes {
+  background-color: #F4F0EC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 799px;
+  min-height: 267px;
+  border-radius: 50px;
+  margin-bottom: 27px;
+  color: #CDA274;
+}
+.article__quotes > img {
+  display: block;
+  width: 90px;
+  height: 90px;
+}
+.article__quotes > h3 {
+  width: 345px;
+  text-align: center;
+}
+.article__list {
+  margin-left: 20px;
+  width: 65%;
+}
+.article__list li {
+  line-height: 150%;
+  margin-bottom: 32px;
+}
+.article__list li::marker {
+  font-family: "DM Serif Display";
+  font-size: 20px;
+  color: #CDA274;
+}
+
+.articlesList__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: start;
+  justify-content: space-between;
+}
+.articlesList__title {
+  width: 100%;
+}
+.articlesList__cards {
+  width: 66%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 27px;
+}
+.articlesList__tags {
+  width: 30%;
+}
+
 .header__menu > li > a:hover {
   color: #CDA274;
   transition: all ease 0.3s;
@@ -580,9 +680,14 @@ template {
   background-color: #F4F0EC;
 }
 .blog__card:hover .blog__link {
-  background-color: #ffffff;
+  background-color: #FFFFFF;
 }
 
 .blogPost__link:hover {
   background-color: #F4F0EC;
+}
+
+.tags__button:hover {
+  background-color: #292F36;
+  color: #FFFFFF;
 }/*# sourceMappingURL=style.css.map */

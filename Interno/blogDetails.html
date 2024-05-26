@@ -1,3 +1,8 @@
+<!-- 
+  Задание: "На странице отображается подробное описание статьи, а под ней размещаются остальные статьи. Необходимо, чтобы на выборе Tags происходила сортировка статей по выбранному тегу. Тег можно выбрать только один."
+  Под заданный макет задание по VUE выполнить невозможно, поскольку в макете отсутствует какой-либо список статей в данном файле выполнена только верстка. Для выполнения задания макет переделан - файл blogDetailsHw3.html
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head> 
@@ -11,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 
-  <title>Blog</title>
+  <title>Blog Details</title>
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -33,74 +38,58 @@
   <main>
     <section class="titlePages">
       <div class="titlePages__background">
-        <img src="img/titlePages/titlePages_blog.jpg" alt="">
-        <div class="titlePages__name">
-          <h2 class="titlePages__title title">Articles & News</h2>
-          <p class="titlePages__description">Home / Blog</p>
-        </div><!-- /.titlePages__intro -->  
+        <img src="img/titlePages/titlePages_blogDetails.jpg" alt="">
       </div><!-- /.titlePages__background -->   
     </section>
 
-    <section class="blog blogPost">
-      <div class="blogPost__container container">
-        <h2 class="blogPost__title">Latest Post</h2>
-        <div class="blogPost__postAnons">
-          <div class="blogPost__img">
-            <img class="img" src="img/blog/blog_4.png" alt="">
-          </div><!-- /.blogPost__img -->
-          <div class="blogPost__description">
-            <h3>Low Cost Latest Invented Interior Designing Ideas</h3>
-            <p>Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belief.</p>
-            <p>Lorem Ipsum is not simply random text. It has roots in a piece of classica.</p>
-            <div class="blog__data blogPost__data">
-              <p>26 December,2022 </p>
-              <a href="" class="blog__link">
-                <svg width="5" height="13" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </a>
+    <section class="blogDetails">
+      <div class="blogDetails__container container">
+        <div class="blogDetails__articles">
+          
+          <div class="blogDetails__article article">
+            <h2 class="article__title">Let’s Get Solution for Building Construction Work</h2>
+            <div class="article__img">
+              <img class="img" src="img/blogDetails/blogDetails_1.jpg" alt="">
+            </div><!-- /.blogPost__img -->
+            <div class="article__data">
+              <p>26 December,2022</p> 
+              <p>Interior / Home / Decore</p>
             </div><!-- /.project__data -->
-          </div><!-- /.blogPost__description -->
-        </div><!-- /.blogPost__postAnons -->
-      </div><!-- /.blogPost__container container -->
+            <p>Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don't look even slightly believable.</p>
+            <p>Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.</p>
+            <div class="article__quotes">
+              <img src="img/icons/quotes.svg" alt="">     
+              <h3><i>The details are not the details. 
+                They make the design.</i></h3>      
+            </div><!-- /.blogDetails__quotes -->
+            <h2 class="blogDetails__title">Design sprints are great</h2>
+            <p>Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
+            <ol class="article__list">
+              <li>Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</li>
+              <li>Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</li>
+              <li>Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</li>
+            </ol>
+            <div class="article__img">
+              <img class="img" src="img/blogDetails/blogDetails_2.jpg" alt="">
+            </div><!-- /.blogPost__img -->           
+            <p>Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
+          </div><!-- /.blogDetails__article -->
 
-      <div class="blogPost__container container">
-        <h2>Articles & News</h2>
+        </div><!-- /.blogDetails__articles -->
 
-        <div id="app">
-          <div class="blog__cards">
-            
-            <div class="blog__card" v-for="card in cards" :key="card.id">
-              <div class="blog__img">
-                <img class="img" :src="card.imgSrc" :alt="card.subtitle"><!-- /.src="img/blog/blog_1.png" -->
-              </div><!-- /.blog__img -->
-              <h3 class="blog__subtitle">{{ card.subtitle }}</h3><!-- /.Let’s Get Solution For Building Construction Work -->
-              <div class="blog__data">
-                <p>{{ card.date }}</p><!-- /.26 December,2022 -->
-                <a href="" class="blog__link">
-                  <svg width="5" height="13" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </a>
-              </div><!-- /.blog__data -->
-            </div><!-- /.blog__card -->
+        <div class="blogDetails__tags tags"> 
+          <h3>Tags</h3>
+          <ul class="tags__list">
+            <li><button class="tags__button">Kitchen</button></li>
+            <li><button class="tags__button">Bedroom</button></li>
+            <li><button class="tags__button">Building</button></li>
+            <li><button class="tags__button">Architecture</button></li>
+            <li><button class="tags__button">Kitchen Planning</button></li>
+            <li><button class="tags__button">Bedroom</button></li>
+          </ul>         
+        </div><!-- /.blogDetails__tags -->
 
-          </div><!-- /.blog__cards -->
-        </div><!-- /id="app" -->
-
-        <div class="blogPost__pagination">
-          <a href="#!" class="blogPost__link">01</a>
-          <a href="#!" class="blogPost__link">02</a>
-          <a href="#!" class="blogPost__link">03</a>
-          <a href="#!" class="blogPost__link">
-            <svg width="5" height="13" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-          </a>
-        </div><!-- /.blogPost__pagination -->
-
-
-      </div><!-- /.blogPost__container container -->
+      </div><!-- /.blogDetails__container container -->
     </section>
   </main>
 
@@ -124,7 +113,7 @@
       </div><!-- /.footer__icon -->
 
       <div class="footer__nav">
-        <h3>Pages</h3>
+        <h2>Pages</h2>
         <ul class="footer__menu">
           <li><a href="#!">Home</a></li>
           <li><a href="#!">Project</a></li>
@@ -133,7 +122,7 @@
       </div><!-- /.footer__nav -->
 
       <div class="footer__contacts">
-        <h3>Contact</h3>
+        <h2>Contact</h2>
         <p>55 East Birchwood Ave. Brooklyn, New York 11201</p>
         <p><a href="mailto:">contact@interno.com</a></p>
         <p><a href="tel:+">(123) 456 - 7890</a></p>
@@ -141,7 +130,5 @@
 
     </div><!-- /.footer__container -->
   </footer>
-  
-  <script src="js/blog.js"></script>
 </body>
 </html>
