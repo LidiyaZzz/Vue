@@ -42,12 +42,11 @@ h1 {
   font-size: 65px;
 }
 
-.title {
+h2 {
   font-size: 50px;
-  text-align: center;
 }
 
-h2, .subtitle {
+h3, .subtitle {
   font-size: 25px;
 }
 
@@ -429,6 +428,7 @@ template {
 
 .blog__title {
   margin-bottom: 8px;
+  text-align: center;
 }
 .blog__description {
   width: 70%;
@@ -444,6 +444,8 @@ template {
   min-height: 521px;
   padding: 21px;
   border-radius: 62px;
+  background-color: #fff;
+  border: 1px solid #E7E7E7;
 }
 .blog__img {
   margin-bottom: 21px;
@@ -499,34 +501,74 @@ template {
   max-width: 258px;
 }
 
-.footer p, .footer h2, .footer li {
-  line-height: 300%;
-}
-.footer__container {
+.titlePages__background {
+  position: relative;
+  height: 356px;
+  margin-bottom: 200px;
   display: flex;
+  align-items: end;
+}
+.titlePages__background > img {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+.titlePages__name {
+  background-color: #ffffff;
+  width: 503px;
+  height: 178px;
+  margin: 0 auto;
+  padding: 41px;
+  border-radius: 41px 41px 0 0;
+}
+.titlePages__description {
+  text-align: center;
+}
+
+.blogPost__container {
+  margin-bottom: 200px;
+}
+.blogPost__postAnons {
+  background-color: #fff;
+  padding: 22px;
+  border: 1px solid #E7E7E7;
+  border-radius: 62px;
+  display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin-top: 96px;
-  margin-bottom: 96px;
+  margin-bottom: 150px;
 }
-.footer__icon {
-  max-width: 393px;
+.blogPost__title, .blogPost h3, .blogPost p {
+  margin-bottom: 22px;
 }
-.footer__logo {
-  width: 177px;
-  height: 50px;
-  margin-bottom: 18px;
+.blogPost__img, .blogPost__description {
+  width: 47%;
 }
-.footer__social:not(:last-child) {
+.blogPost__data {
+  margin-top: 41px;
+}
+.blogPost__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.blogPost__link {
+  display: block;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid #F4F0EC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.blogPost__link:not(:last-child) {
   margin-right: 20px;
-}
-.footer__nav {
-  max-width: 125px;
-}
-.footer__menu {
-  list-style: none;
-}
-.footer__contacts {
-  max-width: 258px;
 }
 
 .header__menu > li > a:hover {
@@ -539,4 +581,8 @@ template {
 }
 .blog__card:hover .blog__link {
   background-color: #ffffff;
+}
+
+.blogPost__link:hover {
+  background-color: #F4F0EC;
 }/*# sourceMappingURL=style.css.map */

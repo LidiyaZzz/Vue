@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue.js Product List</title>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+  <div id="app">
+    <button @click="sortByPrice('asc')">Сортировать по возрастанию цены</button>
+    <button @click="sortByPrice('desc')">Сортировать по убыванию цены</button>
+    <button @click="resetSort">Сортировать по популярности</button>
+    <ul>
+      <li v-for="product in sortedProducts" :key="product.id">
+        {{ product.name }} - {{ product.price }}
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          products: [
+            { id: 1, name: 'Кофе зерновой LAVAZZA 1кг', price: 599 },
+            { id: 2, name: 'Кофе растворимый BUSHIDO 100г', price: 609 },
+            { id: 3, name: 'Кофе растворимый JACOBS Monarch 500г', price: 989 },
+            { id: 4, name: 'Кофе зерновой EGOISTE Noir 1кг', price: 871 },
+            { id: 5, name: 'Кофе зерновой FRESCO Arabica Blend 1кг', price: 1099 }
+          ],
+          defaultSort: 'popular'
+        };
+      },
+      computed: {
+        sortedProducts() {
+          if (this.defaultSort === 'popular') {
+            return this.products;
+          } else if (this.defaultSort === 'asc') {
+            return this.products.slice().sort((a, b) => a.price - b.price);
+          } else if (this.defaultSort === 'desc') {
+            return this.products.slice().sort((a, b) => b.price - a.price);
+          }
+        }
+      },
+      methods: {
+        sortByPrice(order) {
+          this.defaultSort = order;
+        },
+        resetSort() {
+          this.defaultSort = 'popular';
+        }
+      }
+    });
+
+    app.mount('#app');
+  </script>
+</body>
+</html>
