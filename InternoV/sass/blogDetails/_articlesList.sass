@@ -11,5 +11,33 @@
         display: grid
         grid-template-columns: 1fr 1fr
         gap: 27px
+    &__card
+        min-height: 521px
+        padding: 21px
+        border-radius: 62px
+        background-color: #fff
+        border: 1px solid #E7E7E7
+        &:hover     
+            background-color: #F4F0EC
+            & .articlesList__link
+                background-color: #FFFFFF
+    &__img
+        margin-bottom: 21px
+    &__subtitle
+        margin-bottom: 30px
+    &__data
+        display: flex
+        justify-content: space-between
+        & p 
+            font-size: 16px
     &__tags
         width: 30%    
+    &__link
+        display: block
+        width: 52px
+        height: 52px
+        border-radius: 50%
+        background-color: #F4F0EC 
+        display: flex
+        align-items: center
+        justify-content: center

@@ -30,7 +30,7 @@
         <li><a href="#!">Blog</a></li>
       </ul><!-- /.header__menu -->
     </nav><!-- /.header__container container -->
-  </header>
+  </header> 
 
   <main>
     <section class="titlePages">
@@ -44,7 +44,7 @@
         <div class="blogDetails__articles">
           
           <div class="blogDetails__article article">
-            <h2 class="article__title">Let’s Get Solution for Building Construction Work</h2>
+            <h2>Let’s Get Solution for Building Construction Work</h2>
             <div class="article__img">
               <img class="img" src="img/blogDetails/blogDetails_1.jpg" alt="">
             </div><!-- /.blogPost__img -->
@@ -56,10 +56,9 @@
             <p>Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.</p>
             <div class="article__quotes">
               <img src="img/icons/quotes.svg" alt="">     
-              <h3><i>The details are not the details. 
-                They make the design.</i></h3>      
+              <h3><i>The details are not the details. They make the design.</i></h3>      
             </div><!-- /.blogDetails__quotes -->
-            <h2 class="blogDetails__title">Design sprints are great</h2>
+            <h2>Design sprints are great</h2>
             <p>Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
             <ol class="article__list">
               <li>Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</li>
@@ -84,16 +83,16 @@
 
             <div class="articlesList__cards">                
 
-                <div class="blog__card" v-for="card in filteredCards" :key="card.id">
-                <div class="blog__img">
+                <div class="articlesList__card" v-for="card in filteredCards" :key="card.id">
+                <div class="articlesList__img">
                     <img class="img" :src="card.imgSrc" :alt="card.title">
                 </div><!-- /.blog__img -->
                 <div class="articlesList__tag">{{ card.tag }}</div>
                 
-                <h3 class="blog__subtitle">{{ card.title }}</h2>
-                <div class="blog__data">
+                <h3 class="articlesList__subtitle">{{ card.title }}</h2>
+                <div class="articlesList__data">
                     <p>{{ card.date }}</p>
-                    <a href="" class="blog__link">
+                    <a href="" class="articlesList__link">
                     <svg width="5" height="13" viewBox="0 0 10 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 19L9 10L1 1" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>

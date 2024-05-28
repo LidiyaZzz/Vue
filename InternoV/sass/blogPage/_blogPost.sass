@@ -24,15 +24,23 @@
         align-items: center
         justify-content: center
         margin-top: 50px
+    &__data
+        display: flex
+        justify-content: space-between
+        & p 
+            font-size: 16px    
     &__link
         display: block
         width: 52px
         height: 52px
         border-radius: 50%
-        background-color: $light-color
-        border: 1px solid $background
+        background-color: #ffffff
+        border: 1px solid #F4F0EC 
         display: flex
         align-items: center
         justify-content: center
         &:not(:last-child)
             margin-right: 20px
+        &:hover        
+            background-color: #F4F0EC 
+        

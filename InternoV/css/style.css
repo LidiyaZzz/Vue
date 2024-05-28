@@ -327,6 +327,10 @@ template {
 .header__menu > li:not(:first-child) {
   margin-left: 2em;
 }
+.header__menu > li > a:hover {
+  color: #CDA274;
+  transition: all ease 0.3s;
+}
 
 .banner__container {
   background: url(../img/backgroung/banner_background.jpg) 0 0/100% auto no-repeat;
@@ -448,6 +452,12 @@ template {
   background-color: #fff;
   border: 1px solid #E7E7E7;
 }
+.blog__card:hover {
+  background-color: #F4F0EC;
+}
+.blog__card:hover .blog__link {
+  background-color: #FFFFFF;
+}
 .blog__img {
   margin-bottom: 21px;
 }
@@ -528,6 +538,9 @@ template {
   padding: 41px;
   border-radius: 41px 41px 0 0;
 }
+.titlePages__title {
+  text-align: center;
+}
 .titlePages__description {
   text-align: center;
 }
@@ -560,6 +573,13 @@ template {
   justify-content: center;
   margin-top: 50px;
 }
+.blogPost__data {
+  display: flex;
+  justify-content: space-between;
+}
+.blogPost__data p {
+  font-size: 16px;
+}
 .blogPost__link {
   display: block;
   width: 52px;
@@ -573,6 +593,9 @@ template {
 }
 .blogPost__link:not(:last-child) {
   margin-right: 20px;
+}
+.blogPost__link:hover {
+  background-color: #F4F0EC;
 }
 
 .blogDetails__container {
@@ -607,6 +630,10 @@ template {
   border-radius: 10px;
   background-color: #F4F0EC;
   color: #292F36;
+}
+.tags__button:hover, .tags__reset:hover {
+  background-color: #292F36;
+  color: #FFFFFF;
 }
 
 .article__img {
@@ -667,27 +694,128 @@ template {
   grid-template-columns: 1fr 1fr;
   gap: 27px;
 }
+.articlesList__card {
+  min-height: 521px;
+  padding: 21px;
+  border-radius: 62px;
+  background-color: #fff;
+  border: 1px solid #E7E7E7;
+}
+.articlesList__card:hover {
+  background-color: #F4F0EC;
+}
+.articlesList__card:hover .articlesList__link {
+  background-color: #FFFFFF;
+}
+.articlesList__img {
+  margin-bottom: 21px;
+}
+.articlesList__subtitle {
+  margin-bottom: 30px;
+}
+.articlesList__data {
+  display: flex;
+  justify-content: space-between;
+}
+.articlesList__data p {
+  font-size: 16px;
+}
 .articlesList__tags {
   width: 30%;
 }
+.articlesList__link {
+  display: block;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #F4F0EC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.header__menu > li > a:hover {
+.ourProject__container {
+  margin-bottom: 200px;
+}
+.ourProject__category {
+  text-align: center;
+}
+.ourProject__buttons {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 61px;
+  border: 1px solid #CDA274;
+  border-radius: 18px;
+}
+.ourProject__button {
+  display: block;
+  min-height: 74px;
+  border-radius: 18px;
+  background-color: #fff;
   color: #CDA274;
-  transition: all ease 0.3s;
+  padding: 26px;
+  min-width: 219px;
 }
-
-.blog__card:hover {
+.ourProject__button:hover {
+  background-color: #CDA274;
+  color: #fff;
+}
+.ourProject__columns {
+  -moz-columns: 2;
+       columns: 2;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.ourProject__card {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  margin-bottom: 35px;
+}
+.ourProject__img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 24px;
+}
+.ourProject__info {
+  display: flex;
+  justify-content: space-between;
+}
+.ourProject__title {
+  margin-bottom: 4px;
+}
+.ourProject__link {
+  display: block;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
   background-color: #F4F0EC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.blog__card:hover .blog__link {
-  background-color: #FFFFFF;
+.ourProject__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
 }
-
-.blogPost__link:hover {
+.ourProject__pagLink {
+  display: block;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid #F4F0EC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ourProject__pagLink:not(:last-child) {
+  margin-right: 20px;
+}
+.ourProject__pagLink:hover {
   background-color: #F4F0EC;
-}
-
-.tags__button:hover {
-  background-color: #292F36;
-  color: #FFFFFF;
 }/*# sourceMappingURL=style.css.map */
