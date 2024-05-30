@@ -1,4 +1,4 @@
-<!-- ArticlesListComp.vue -->
+
 <template>
     <section class="articlesList">
         <div class="articlesList__container container">
@@ -47,42 +47,42 @@ export default {
         cards: [
           { 
             id: 1, 
-            imgSrc: require('../../assets/img/blog/blog_1.png'), 
+            imgSrc: require('../assets/img/blog/blog_1.png'), 
             title: 'Let’s Get Solution For Building Construction Work', 
             date: '26 December, 2022', 
             tag: 'Kitchen Planning' 
           },
           { 
             id: 2, 
-            imgSrc: require('../../assets/img/blog/blog_2.png'), 
+            imgSrc: require('../assets/img/blog/blog_2.png'), 
             title: 'Low Cost Latest Invented Interior Designing Ideas.', 
             date: '22 December,2022', 
             tag: 'Kitchen' 
           },
           { 
             id: 3, 
-            imgSrc: require('../../assets/img/blog/blog_3.png'), 
+            imgSrc: require('../assets/img/blog/blog_3.png'), 
             title: 'Best For Any Office & Business Interior Solution', 
             date: '25 December,2022 ', 
             tag: 'Kitchen Planning' 
           },
           { 
             id: 4, 
-            imgSrc: require('../../assets/img/blog/blog_5.png'), 
+            imgSrc: require('../assets/img/blog/blog_5.png'), 
             title: 'Let’s Get Solution For Building Construction Work', 
             date: '26 December,2022', 
             tag: 'Building' 
           },
           { 
             id: 5, 
-            imgSrc: require('../../assets/img/blog/blog_6.png'), 
+            imgSrc: require('../assets/img/blog/blog_6.png'), 
             title: 'Low Cost Latest Invented Interior Designing Ideas.', 
             date: '22 December,2022', 
             tag: 'Bedroom' 
           },
           { 
             id: 6, 
-            imgSrc: require('../../assets/img/blog/blog_7.png'), 
+            imgSrc: require('../assets/img/blog/blog_7.png'), 
             title: 'Best For Any Office & Business Interior Solution', 
             date: '25 December,2022 ', 
             tag: 'Architecture' 
@@ -112,7 +112,6 @@ export default {
 }
 </script>
   
-<!-- Стили для ArticlesListComp -->
 <style lang="sass">
 .articlesList
     &__container
