@@ -3,14 +3,19 @@
     <header class="header">
     <nav class="header__container container">
       <div class="header__logo">
-        <img src="../assets/img/icons/headerLogo.svg" alt="">
+        <router-link to="/">
+          <img src="../assets/img/icons/headerLogo.svg" alt="">
+        </router-link>        
       </div><!-- /.header__logo -->
 
       <ul class="header__menu">
-        <li><a href="#!">Home</a></li>
-        <li><a href="#!">Project</a></li>
-        <li><a href="#!">Blog</a></li>
-      </ul><!-- /.header__menu -->
+        <li><router-link to="/" class="header__link">Home</router-link></li>
+        <li><router-link to="/blogPage" class="header__link">Blog</router-link></li>
+        <li><router-link to="/blogDetailsPage" class="header__link">Blog Details</router-link></li>
+        <li><router-link to="/ourProject" class="header__link">Project</router-link></li>
+        <li><router-link to="/projectDetail" class="header__link">Project Detail</router-link></li>
+      </ul><!-- /.header__menu -->   
+    
     </nav><!-- /.header__container container -->
   </header>
 </template>
@@ -43,7 +48,7 @@
             display: block
             &:not(:first-child)
               margin-left: 2em
-            &>a:hover        
+            & .header__link:hover        
               color: #CDA274
               transition: all ease 0.3s
 

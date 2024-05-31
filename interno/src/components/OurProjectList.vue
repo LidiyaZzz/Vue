@@ -6,7 +6,6 @@
             <div class="ourProject__card" v-for="project in filteredProjects" :key="project.id">
                 <article>
                     <img class="ourProject__img"  :src="project.image" >
-                    <!-- /src="img/ourProject/ourProject_1.jpg"/ :src="project.image" -->
                     <div class="ourProject__info">
                         <div class="ourProject__name">
                             <h3 class="ourProject__title">{{ project.title }}</h3>

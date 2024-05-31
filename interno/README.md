@@ -1,4 +1,4 @@
-# hw6
+# interno
 
 ## Project setup
 ```
